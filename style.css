@@ -1,0 +1,215 @@
+body {
+    background: #f9fafc;
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.maincontainer {
+    max-width: 490px;
+    margin: 40px auto;
+    background: #fff;
+    box-shadow: 0 8px 32px 0 rgba(60,60,85,0.08);
+    border-radius: 16px;
+    padding: 32px 28px 24px 28px;
+}
+
+.headers {
+    text-align: center;
+    margin-bottom: 12px;
+}
+
+.maintopic {
+    color: #364964;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+.ideas {
+    color: #627798;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.topicSuggest {
+    display: block;
+    margin: 0 auto 18px auto;
+    width: 85%;
+    padding: 10px 12px;
+    font-size: 1rem;
+    color: #384358;
+    border: 1px solid #dde3ed;
+    border-radius: 8px;
+    background: #f6f9fb;
+    transition: border 0.2s;
+}
+
+.topicSuggest:focus {
+    border: 1.5px solid #5489f3;
+    outline: none;
+}
+
+/* Divider line */
+hr {
+    border: none;
+    border-top: 1.5px solid #f0f2f7;
+    margin: 18px 0 24px 0;
+}
+
+/* Shopping Time/Timer Section */
+.mainContent label,
+.mainContent button,
+#timerange {
+    display: inline-block;
+    margin-right: 12px;
+}
+
+#startTime, #endTime {
+    padding: 6px 6px;
+    font-size: 0.94rem;
+    border: 1.2px solid #cbd0e3;
+    border-radius: 6px;
+    background: #fcfcfc;
+    margin-left: 6px;
+}
+#setRangeBtn {
+    padding: 7px 14px;
+    border: none;
+    background: #4887f1;
+    color: #fff;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#setRangeBtn:hover {
+    background: #2862b7;
+}
+#timerange {
+    color: #1f7a1f;
+    font-weight: 600;
+    font-size: 1rem;
+    margin-top: 8px;
+}
+
+/* To-Do Items */
+.additems {
+    margin-top: 26px;
+    margin-bottom: 10px;
+}
+
+/* Style for each todo row */
+.item-row {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    margin-bottom: 12px;
+    background: #f6f9fb;
+    border-radius: 7px;
+    padding: 8px 12px;
+    box-shadow: 0 2px 4px #dadee4a1;
+    transition: box-shadow 0.2s;
+}
+
+.item-row:hover {
+    box-shadow: 0 4px 14px #c3cbe973;
+}
+
+.item-row input[type="text"] {
+    flex: 1;
+    padding: 8px 8px;
+    font-size: 1rem;
+    border: 1px solid #c4cbdb;
+    border-radius: 6px;
+    background: #fff;
+    transition: border 0.2s;
+}
+.item-row input[type="text"]:disabled {
+    background: #eef2f6;
+    color: #9bb1c7;
+    text-decoration: line-through;
+}
+
+/* Checkbox/radio style */
+.item-row input[type="checkbox"],
+.item-row input[type="radio"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #5489f3;
+    margin-right: 6px;
+    cursor: pointer;
+}
+
+/* Buttons inside each row */
+.item-row button {
+    background: #fff;
+    border: 1px solid #b8c1d1;
+    border-radius: 6px;
+    font-size: 1rem;
+    color: #41547c;
+    padding: 5px 12px;
+    min-width: 44px;
+    margin-left: 2px;
+    margin-right: 2px;
+    cursor: pointer;
+    transition: background 0.16s, border-color 0.16s;
+}
+.item-row button:hover {
+    background: #4887f1;
+    color: #fff;
+    border-color: #4887f1;
+}
+.item-row button:active {
+    background: #2c6ace;
+}
+
+/* Plus/add buttons (+) special color */
+.item-row button:only-of-type, 
+.item-row button:last-child {
+    color: #059872;
+    border-color: #059872;
+    background: #f0fcf6;
+    font-weight: bold;
+}
+/* Add Item Button */
+#addItemBtn {
+    margin: 0 auto;
+    margin-top: 17px;
+    display: block;
+    background: #059872;
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.07rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    box-shadow: 0 3px 8px #ace2dcb7;
+    cursor: pointer;
+    transition: background 0.22s, transform 0.14s;
+}
+#addItemBtn:hover {
+    background: #043a28;
+    transform: translateY(-2px) scale(1.03);
+}
+
+/* Responsive tweaks */
+@media (max-width: 650px) {
+    .maincontainer {
+        padding: 10vw 2vw 7vw 2vw;
+        max-width: 98vw;
+    }
+    .item-row input[type="text"] {
+        font-size: 0.93rem;
+    }
+    .item-row button, #addItemBtn, #setRangeBtn {
+        font-size: 0.96rem;
+        min-width: 35px;
+        padding: 4px 10px;
+        margin-left: 136px;
+        margin-top: 24px;
+    }
+}
